@@ -16,7 +16,10 @@ public class MyDemoLoggingAspect {
 	//@Before("execution(public void pl.jaceksysiak.aopdemo.dao.AccountDAO.addAccount())")
 	//@Before("execution(public void add*())")
 	//@Before("execution(void add*())")
-	@Before("execution(* add*())")
+	//@Before("execution(* add*())")
+	//@Before("execution(* add*(pl.jaceksysiak.aopdemo.Account, ..))")   // account and any other param.
+	//@Before("execution(* add*(..))")   //any parameters
+	  @Before("execution(* pl.jaceksysiak.aopdemo.dao.*.*(..))")      // avery thing in given package
 	public void beforeAddAccountAdvice() {
 		
 		System.out.println("\n=====>>> Executing @Before advice on some method");

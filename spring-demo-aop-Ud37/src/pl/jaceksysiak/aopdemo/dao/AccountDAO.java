@@ -2,12 +2,20 @@ package pl.jaceksysiak.aopdemo.dao;
 
 import org.springframework.stereotype.Component;
 
+import pl.jaceksysiak.aopdemo.Account;
+
 @Component
 public class AccountDAO {
 
-	public void addAccount() {
+	public void addAccount(Account theAccount, boolean vip) {
 		
 		System.out.println(getClass() + ": DOING MY DB WORK: ADDING AN ACCOUNT");
 		
+	}
+	
+	public boolean doWork() {
+		
+		System.out.println(getClass() + ": doWork()");
+		return false;
 	}
 }
